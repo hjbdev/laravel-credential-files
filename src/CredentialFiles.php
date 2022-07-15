@@ -8,7 +8,7 @@ class CredentialFiles
 {
     public function __construct()
     {
-        if (!Storage::exists('credentials')) {
+        if (! Storage::exists('credentials')) {
             Storage::makeDirectory('credentials');
         }
     }

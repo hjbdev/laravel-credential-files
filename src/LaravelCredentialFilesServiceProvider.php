@@ -4,7 +4,6 @@ namespace Hjbdev\LaravelCredentialFiles;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Hjbdev\LaravelCredentialFiles\Commands\LaravelCredentialFilesCommand;
 
 class LaravelCredentialFilesServiceProvider extends PackageServiceProvider
 {

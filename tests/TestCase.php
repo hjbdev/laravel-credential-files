@@ -2,9 +2,9 @@
 
 namespace Hjbdev\LaravelCredentialFiles\Tests;
 
+use Hjbdev\LaravelCredentialFiles\LaravelCredentialFilesServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Hjbdev\LaravelCredentialFiles\LaravelCredentialFilesServiceProvider;
 
 class TestCase extends Orchestra
 {

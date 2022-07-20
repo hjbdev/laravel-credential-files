@@ -18,6 +18,7 @@ class CredentialFiles
         if (Storage::exists('credentials/'.$key)) {
             return decrypt(Storage::get('credentials/' . $key));
         }
+
         return null;
     }
 

@@ -15,7 +15,10 @@ class CredentialFiles
 
     public function get($key)
     {
-        return decrypt(Storage::get('credentials/' . $key));
+        if (Storage::exists('credentials/'.$key)) {
+            return decrypt(Storage::get('credentials/' . $key));
+        }
+        return null;
     }
 
     public function set($key, $value)
@@ -30,7 +33,7 @@ class CredentialFiles
 
     public function __get($key)
     {
-        $this->get($key);
+        return $this->get($key);
     }
 
     public function __set($key, $value)
@@ -41,7 +44,7 @@ class CredentialFiles
     public function __call($method, $params)
     {
         if (count($params) === 0) {
-            $this->get($method);
+            return $this->get($method);
         } else {
             $this->set($method, ...$params);
         }

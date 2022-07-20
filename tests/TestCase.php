@@ -27,6 +27,7 @@ class TestCase extends Orchestra
     public function getEnvironmentSetUp($app)
     {
         config()->set('database.default', 'testing');
+        config()->set('app.key', 'base64:6ReyUqCkLWrtTJ9zUmauXNWcTsg0FXTmr/LvWP1cLGI=');
 
         /*
         $migration = include __DIR__.'/../database/migrations/create_laravel-credential-files_table.php.stub';
